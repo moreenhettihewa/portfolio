@@ -1,0 +1,20 @@
+.header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  height: 10em;
+  width: 10em;
+  margin: auto;
+}
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.list__icons {
+  margin-left: 5em;
+}
