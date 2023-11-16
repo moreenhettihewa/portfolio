@@ -1,6 +1,8 @@
-h1,
-h3,
-p {
+
+mat-card{
     font-family: "Open Sans", sans-serif;
-    letter-spacing: normal;
+}
+
+.card-item{
+    margin-bottom: 1em;
 }
