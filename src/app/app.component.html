@@ -1,32 +1,45 @@
-<div style="display: flex; flex-direction: row; justify-content: space-between;max-height: 100vh;">
-  <div style="width: 30%; margin-top: 10%;">
+<div
+  style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 100vh;
+  "
+>
+  <div class="main-nav-bar">
     <div mat-card-avatar class="header-image"></div>
-    <div class="name">
-      <h1>Chanuka Tennakoon</h1>
-    </div>
-    <div class="title">
-      <h2>Mechanical Engineer</h2>
-    </div>
+    <div class="name">Chanuka Tennakoon</div>
+    <div class="title">Mechanical Engineer</div>
     <div class="list__icons">
-        <div [routerLink]="'/'">
-            <mat-icon>home</mat-icon>
-            <span>home</span>
-        </div>
-        <div [routerLink]="'/projects'">
-            <mat-icon>code_off</mat-icon>
-            <span>projects</span>
-        </div>
-        <div [routerLink]="'/about'">
-            <mat-icon>contacts_product</mat-icon>
-            <span>About</span>
-        </div>
-        <div>
-            <mat-icon>email</mat-icon>
-            <span>Email me</span>
-        </div>
+      <div class="nav-icon">
+        <i class="fa fa-home fa-lg" [routerLink]="'/'"></i>
+        <span class="nav-icon__text">Home</span>
+      </div>
+      <div class="nav-icon">
+        <i class="fa fa-code fa-lg" [routerLink]="'/projects'"></i>
+        <span class="nav-icon__text">Projects</span>
+      </div>
+
+      <div class="nav-icon">
+        <i class="fa fa-user fa-lg" [routerLink]="'/about'"></i>
+        <span class="nav-icon__text">About</span>
+      </div>
+
+      <div class="nav-icon">
+        <i class="fa fa-envelope fa-lg"></i>
+        <span class="nav-icon__text">Email me</span>
+      </div>
+      <div class="nav-icon">
+        <i class="fab fa-lg fa-linkedin"></i>
+        <span class="nav-icon__text">LinkedIn</span>
+      </div>
+      <div class="nav-icon">
+        <i class="fab fa-lg fa-github"></i>
+        <span class="nav-icon__text">Github</span>
+      </div>
     </div>
   </div>
-  <mat-card style="width: 70%; min-height: 100vh;overflow: scroll;">
+  <mat-card style="width: 70%; min-height: 100vh; overflow: scroll">
     <mat-card-content>
       <router-outlet> </router-outlet>
     </mat-card-content>
