@@ -8,8 +8,8 @@
 >
   <div class="main-nav-bar">
     <div mat-card-avatar class="header-image"></div>
-    <div class="name">Chanuka Tennakoon</div>
-    <div class="title">Mechanical Engineer</div>
+    <div class="name">Moreen Hettihewa</div>
+    <div class="title">Software Engineer. Self Learner.</div>
     <div class="list__icons">
       <div class="nav-icon">
         <i class="fa fa-home fa-lg" [routerLink]="'/'"></i>
@@ -25,11 +25,13 @@
         <span class="nav-icon__text">About</span>
       </div>
 
-      <div class="nav-icon">
+      <div class="nav-icon" href="mailto:moreenmadhushani@gmail.com">
         <i class="fa fa-envelope fa-lg"></i>
-        <span class="nav-icon__text">Email me</span>
+        <a href="mailto:moreemadhushani@gmail.com">
+          <span class="nav-icon__text">Email me</span>
+        </a>
       </div>
-      <div class="nav-icon">
+      <div class="nav-icon" (click)="openLinkedIn()">
         <i class="fab fa-lg fa-linkedin"></i>
         <span class="nav-icon__text">LinkedIn</span>
       </div>
