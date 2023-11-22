@@ -3,12 +3,13 @@
     height: 10em;
     width: 10em;
     margin: auto;
+    border-radius: 50%;
 }
 
 .name {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    color: #ebebeb;
+    /* color: #ebebeb; */
     text-align: center;
     letter-spacing: 0.1em;
     font-size: 22px;
@@ -19,7 +20,7 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 100;
     letter-spacing: -0.04em;
-    color: #ebebeb;
+    /* color: #ebebeb; */
     font-size: 17px;
 }
 
@@ -31,12 +32,10 @@
 
 span {
     font-family: "Open Sans", sans-serif;
-    color: #ebebeb;
+    /* color: #ebebeb; */
 }
 
 .main-nav-bar {
-    max-height: 100vh;
-    width: 30%;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -44,7 +43,7 @@ span {
 .fa,
 .fab {
     width: 2em;
-    color: #ebebeb;
+    /* color: #ebebeb; */
     font-size: 1em;
 }
 
@@ -56,3 +55,36 @@ span {
     font-size: 16px;
     font-weight: 300;
 }
+
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }

@@ -1,47 +1,74 @@
-<div
-  style="
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 100vh;
-  "
->
-  <div class="main-nav-bar">
-    <div mat-card-avatar class="header-image"></div>
-    <div class="name">Chanuka Tennakoon</div>
-    <div class="title">Mechanical Engineer</div>
-    <div class="list__icons">
-      <div class="nav-icon">
-        <i class="fa fa-home fa-lg" [routerLink]="'/'"></i>
-        <span class="nav-icon__text">Home</span>
-      </div>
-      <div class="nav-icon">
-        <i class="fa fa-code fa-lg" [routerLink]="'/projects'"></i>
-        <span class="nav-icon__text">Projects</span>
-      </div>
+<div class="example-container">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Responsive App</h1>
+  </mat-toolbar>
 
-      <div class="nav-icon">
-        <i class="fa fa-user fa-lg" [routerLink]="'/about'"></i>
-        <span class="nav-icon__text">About</span>
-      </div>
+  <mat-sidenav-container
+    class="example-sidenav-container"
+    [style.marginTop.px]="0"
+  >
+    <mat-sidenav
+      #snav
+      [mode]="'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 10em;
+          "
+        >
+          <div class="main-nav-bar" style="padding: 1em">
+            <div mat-card-avatar class="header-image"></div>
+            <div class="name">Chanuka Tennakoon</div>
+            <div class="title">Mechanical Engineer</div>
+            <div class="list__icons">
+              <div class="nav-icon">
+                <i class="fa fa-home fa-lg"></i>
+                <span class="nav-icon__text">Home</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fa fa-user fa-lg"></i>
+                <span class="nav-icon__text">About</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fa fa-graduation-cap fa-lg"></i>
+                <span class="nav-icon__text">Education</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fa fa-code fa-lg"></i>
+                <span class="nav-icon__text">Projects</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fa fa-envelope fa-lg"></i>
+                <span class="nav-icon__text">Email me</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fab fa-lg fa-linkedin"></i>
+                <span class="nav-icon__text">LinkedIn</span>
+              </div>
+              <div class="nav-icon">
+                <i class="fab fa-lg fa-github"></i>
+                <span class="nav-icon__text">Github</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
 
-      <div class="nav-icon">
-        <i class="fa fa-envelope fa-lg"></i>
-        <span class="nav-icon__text">Email me</span>
-      </div>
-      <div class="nav-icon">
-        <i class="fab fa-lg fa-linkedin"></i>
-        <span class="nav-icon__text">LinkedIn</span>
-      </div>
-      <div class="nav-icon">
-        <i class="fab fa-lg fa-github"></i>
-        <span class="nav-icon__text">Github</span>
-      </div>
-    </div>
-  </div>
-  <mat-card style="width: 70%; min-height: 100vh; overflow: scroll">
-    <mat-card-content>
-      <router-outlet> </router-outlet>
-    </mat-card-content>
-  </mat-card>
+    <mat-sidenav-content style="padding-right: 10em;">
+      <app-home></app-home>
+      <app-about></app-about>
+      <app-education></app-education>
+      <app-projects></app-projects>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

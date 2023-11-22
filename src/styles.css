@@ -1,24 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-html,
-body {
-    overflow: none;
-    max-height: 100vh;
-    height: 100%;
-}
-
-body {
-    background-color: #3e166f;
-    max-height: 100vh;
-}
-
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-}
 
 h1,
 h2,
